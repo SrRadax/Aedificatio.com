@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aedificatio.com.ar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+<header>
+  <h1>Aedificatio</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#productos">Productos</a>
+    <a href="#contactos">Contactos</a>
+    <a href="carrito.html" id="cart-link">
+    <a href="carrito.html" id="carrito" title="Ver carrito">🛒</a> 
+    </a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h2>Construyendo el futuro, renovando el presente</h2>
+  <p>Expertos en obras civiles, remodelaciones y grandes proyectos.</p>
+</section>
+
+<section id="servicios" class="services">
+  <h2>Servicios</h2>
+  <div class="service-items">
+    <div class="service-item">
+      <h3>Obras civiles</h3>
+      <p>Realizamos construcciones desde cero: casas, edificios y estructuras industriales.</p>
+    </div>
+    <div class="service-item">
+      <h3>Remodelaciones</h3>
+      <p>Modernizamos espacios residenciales y comerciales con materiales de alta calidad.</p>
+    </div>
+    <div class="service-item">
+      <h3>Dirección de obra</h3>
+      <p>Supervisión y gestión profesional para que tu proyecto sea un éxito.</p>
+    </div>
+  </div>
+</section>
+
+<section id="productos">
+  <h1 class="catalogo-title">Productos</h1>
+  <div class="productos">
+    <div class="producto">
+      <img src="imagenes/percutora.png" alt="Percutora" />
+      <p>Percutora</p>
+      <button onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/taladro.png" alt="Taladro" />
+      <p>Taladro</p>
+      <button onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/cortadora.png" alt="Cortadora de banco" />
+      <p>Cortadora de banco</p>
+      <button onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/martillo.png" alt="Martillo" />
+      <h3>Martillo</h3>
+      <p>Martillo de carpintero con mango de goma.</p>
+      <button onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/llaveinglesa.png" alt="Llave Inglesa" />
+      <h3>Llave Inglesa</h3>
+      <p>Llave ajustable de acero reforzado.</p>
+      <button onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    </div>
+     <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
+</section>
+
+<section id="contactos">
+  <h2>Contacto</h2>
+  <p>Escribinos a <strong>Aedification@gmail.com</strong><br>
+  o llamanos al <strong>(+54 9) 3704-516510</strong>.</p>
+   <br>
+  <h2>Danos tu opinion</h2>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+   <br><br>
+  
+   <label for="email">Correo Electronico:</label>
+  <input type="email" id="email" name="email" required>
+   <br><br>
+  
+   <label for="mensaje">Mensaje:</label>
+  <input type="mensaje" name="mensaje" rows="4" cols="50" requiered>
+  </textarea>
+  <br><br>
+
+  <input type="submit" value="Enviar">
+</form>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Aedificatio. Todos los derechos reservados DEAAA.</p>
+  <p>Administrativos de la empresa, Ramiro Rojas, Joel Brizuela, Gerardo Vazquez</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

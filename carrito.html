@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tu Carrito</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    ul {
+      max-width: 600px;
+      margin: 40px auto;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      font-size: 18px;
+    }
+    .empty {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🛒 Tus productos</h1>
+
+<ul id="lista-productos"></ul>
+<p class="empty" id="mensaje-vacio" style="display: none;">No agregaste productos al carrito aún.</p>
+
+<script>
+  const lista = document.getElementById("lista-productos");
+  const mensaje = document.getElementById("mensaje-vacio");
+
+  let productos = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  if (productos.length === 0) {
+    mensaje.style.display = "block";
+  } else {
+    productos.forEach(producto => {
+      const li = document.createElement("li");
+      li.textContent = producto;
+      lista.appendChild(li);
+    });
+  }
+</script>
+
+</body>
+</html>
